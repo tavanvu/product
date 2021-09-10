@@ -5,9 +5,4 @@ public interface General<T> {
     void add(T t);
     void update(String id,T t);
     void delete(String id);
-    void softPrice();
-    int findPriceMax();
-    void output();
-    void input();
-
 }

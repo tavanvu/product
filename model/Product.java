@@ -2,19 +2,17 @@ package product.model;
 
 import java.io.Serializable;
 
-public class product implements Serializable {
-    private String Id, name, prize;
-    private int price, quantity;
+public class Product implements Serializable {
+    private String Id, name, prize,category;
+    private int price;
 
-    public product() {
-    }
 
-    public product(String id, String name, String prize, int price, int quantity) {
+    public Product(String id, String name, String prize,String category, int price) {
         this.Id = id;
         this.name = name;
         this.prize = prize;
         this.price = price;
-        this.quantity = quantity;
+        this.category=category;
     }
 
     public String getId() {
@@ -49,22 +47,19 @@ public class product implements Serializable {
         this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getCategory() {
+        return category;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     @Override
     public String toString() {
-        return "product{" +
-                "Id='" + Id + '\'' +
-                ", name='" + name + '\'' +
-                ", prize='" + prize + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                '}';
+        return "Id=" + Id + '\'' + "|" +
+                "name=" + name + '\'' + "|" +
+                "prize=" + prize + '\'' + "|" +
+                "price=" + price + "|";
     }
 }
